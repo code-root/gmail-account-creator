@@ -1,0 +1,27 @@
+{
+  "name": "gmail-account-creator",
+  "version": "1.0.0",
+  "description": "Automated Gmail account creator using GPM Login, OMO Captcha, and SMS Verification",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "list-folders": "node list-dolphin-folders.js"
+  },
+  "keywords": [
+    "gmail",
+    "automation",
+    "gpmlogin",
+    "gpm-login",
+    "captcha"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.0",
+    "dotenv": "^16.3.0",
+    "gologin": "^2.1.33",
+    "puppeteer-core": "^21.0.0"
+  }
+}

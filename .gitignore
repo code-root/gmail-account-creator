@@ -1,0 +1,56 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Logs
+logs/
+*.log
+
+# Results and data files
+results.json
+summary.json
+data/
+profiles.json
+
+# Config files with sensitive data (keep structure, ignore content)
+config/proxies.txt
+email.txt
+gmlogin.txt
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-*
+
+# OS
+.DS_Store
+Thumbs.db
+.DS_Store?
+
+# Temporary files
+*.tmp
+*.temp
+*.cache
+
+# Build outputs
+dist/
+build/
+*.min.js
+*.min.css
+
+# Test coverage
+coverage/
+.nyc_output/
+
+# GPM Login local data (if any)
+.gpm/
+gpm-data/
+
+

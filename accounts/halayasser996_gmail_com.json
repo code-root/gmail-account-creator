@@ -1,0 +1,32 @@
+{
+  "success": true,
+  "email": "halayasser996@gmail.com",
+  "password": "ldx@aS8mF0imR@1J",
+  "phone": "4367870412393",
+  "phoneCode": {
+    "success": true,
+    "code": "003894"
+  },
+  "orderId": "929144206",
+  "firstName": "Hala",
+  "lastName": "Yasser",
+  "fullName": "Hala Yasser",
+  "username": "halayasser996",
+  "birthDate": {
+    "birthYear": 1972,
+    "birthMonth": 11,
+    "birthDay": 26,
+    "year": 1972,
+    "month": 11,
+    "day": 26
+  },
+  "profileId": "c2bbb2da-db14-4c29-b905-bb9f77ecdf0c",
+  "profileType": "GPM Login",
+  "proxy": "92.204.164.15:9000:geonode_y1DkjlYREm-type-residential-country-ae:df9448e9-cafd-4afd-bd01-6b779f5598ea",
+  "proxyIP": "92.204.164.15",
+  "profileIP": "86.97.216.103",
+  "timestamp": "2026-01-01T23:07:12.637Z",
+  "accountNumber": 1,
+  "createdAt": "2026-01-01T23:11:19.032Z",
+  "savedAt": "2026-01-01T23:11:19.034Z"
+}

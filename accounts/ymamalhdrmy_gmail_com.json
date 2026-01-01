@@ -1,0 +1,32 @@
+{
+  "success": true,
+  "email": "ymamalhdrmy@gmail.com",
+  "password": "t1Yn!64ZfQ%DkN^*",
+  "phone": "4367870321295",
+  "phoneCode": {
+    "success": true,
+    "code": "353178"
+  },
+  "orderId": "929147646",
+  "firstName": "يمام",
+  "lastName": "آل حضرمي",
+  "fullName": "يمام آل حضرمي",
+  "username": "ymamalhdrmy",
+  "birthDate": {
+    "birthYear": 2006,
+    "birthMonth": 11,
+    "birthDay": 10,
+    "year": 2006,
+    "month": 11,
+    "day": 10
+  },
+  "profileId": "790e91ff-005e-49a6-a255-0f116ed84eef",
+  "profileType": "GPM Login",
+  "proxy": "92.204.164.15:9000:geonode_y1DkjlYREm-type-residential-country-ae:df9448e9-cafd-4afd-bd01-6b779f5598ea",
+  "proxyIP": "92.204.164.15",
+  "profileIP": null,
+  "timestamp": "2026-01-01T23:20:59.339Z",
+  "accountNumber": 1,
+  "createdAt": "2026-01-01T23:25:58.321Z",
+  "savedAt": "2026-01-01T23:25:58.323Z"
+}

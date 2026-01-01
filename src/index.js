@@ -442,11 +442,12 @@ async function createAccount(accountNumber = null) {
             // Get page for recovery phone addition
             const page = await profile.getPage();
             if (page) {
-                // Prepare account data with password for recovery phone flow
+                // Prepare account data with password, phone, and orderId for recovery phone flow
                 const accountDataForRecovery = {
                     ...accountData,
                     password: result.password,
-                    phone: result.phone
+                    phone: result.phone,
+                    orderId: result.orderId
                 };
                 
                 recoveryPhoneData = await addRecoveryPhone(page, accountDataForRecovery, countryCode);

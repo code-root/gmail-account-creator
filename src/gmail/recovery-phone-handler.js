@@ -487,45 +487,207 @@ async function handleConsentPage(page) {
 }
 
 /**
- * Get new OTP code for recovery phone (using same phone number but new order)
- * الحصول على كود OTP جديد لرقم الاسترداد (باستخدام نفس الرقم ولكن طلب جديد)
+ * Handle Next or Skip button click
+ * التعامل مع الضغط على زر Next أو Skip
  */
-async function getNewRecoveryOTP(phoneNumber, countryCode, smsProvider, timeout = 120000) {
+async function handleSkipButton(page) {
     try {
-        logger.info('Getting new OTP code for recovery phone', { phone: phoneNumber });
+        logger.info('Looking for Next or Skip button...');
         
-        // Create new order for recovery phone using same country
-        // إنشاء طلب جديد لرقم الاسترداد باستخدام نفس الدولة
-        const service = process.env.FIVESIM_SERVICE || 'go'; // 'go' is Google service code
-        const operator = process.env.FIVESIM_OPERATOR || 'any';
-        const maxPrice = 50; // Maximum price in rubles
+        // Human behavior: Wait a bit before clicking
+        // سلوك بشري: الانتظار قليلاً قبل النقر
+        await humanSleep(getHumanDelay('thinking'));
         
-        const newOrder = await smsApi.buySmsVerifyNumber(service, countryCode, operator, { maxPrice });
-        if (!newOrder || !newOrder.id) {
-            throw new Error('Failed to create new SMS order for recovery phone');
+        let buttonClicked = false;
+        
+        // Method 1: Look for "Next" button by text (priority)
+        // الطريقة 1: البحث عن زر "Next" بالنص (الأولوية)
+        try {
+            const nextButton = await page.evaluateHandle(() => {
+                const buttons = Array.from(document.querySelectorAll('button, a'));
+                return buttons.find(btn => {
+                    const text = (btn.textContent || '').toLowerCase().trim();
+                    return (text.includes('next') || 
+                            text.includes('التالي') || 
+                            text.includes('continue') ||
+                            text.includes('متابعة')) && 
+                           btn.offsetParent !== null && 
+                           !btn.disabled;
+                });
+            });
+            
+            if (nextButton && nextButton.asElement()) {
+                await humanClick(page, nextButton.asElement(), { preClickDelay: true, postClickDelay: true });
+                logger.info('Next button clicked');
+                buttonClicked = true;
+                await humanSleep(getHumanDelay('pageLoad'));
+            }
+        } catch (e) {
+            logger.debug('Could not find Next button by text', { error: e.message });
         }
         
-        logger.info('New SMS order created for recovery phone', { orderId: newOrder.id, phone: newOrder.phone });
+        // Method 2: Look for "Next" button by jsname attribute (from HTML provided)
+        // الطريقة 2: البحث عن زر "Next" بـ jsname (من HTML المقدم)
+        if (!buttonClicked) {
+            try {
+                const nextSelectors = [
+                    'button[jsname="LgbsSe"]',
+                    'button[data-primary-action-label="Next"]',
+                    'button.VfPpkd-LgbsSe',
+                    'button[type="button"][jsname="LgbsSe"]'
+                ];
+                
+                for (const selector of nextSelectors) {
+                    try {
+                        const nextElement = await waitForElement(page, selector, 2000);
+                        if (nextElement) {
+                            const isVisible = await nextElement.evaluate(el => el.offsetParent !== null);
+                            const isDisabled = await nextElement.evaluate(el => el.disabled);
+                            if (isVisible && !isDisabled) {
+                                await humanClick(page, nextElement, { preClickDelay: true, postClickDelay: true });
+                                logger.info('Next button clicked (CSS selector)', { selector });
+                                buttonClicked = true;
+                                await humanSleep(getHumanDelay('pageLoad'));
+                                break;
+                            }
+                        }
+                    } catch (e) {
+                        continue;
+                    }
+                }
+            } catch (e) {
+                logger.debug('Could not find Next button by CSS selectors', { error: e.message });
+            }
+        }
         
-        // Wait for verification code
-        const verificationCode = await smsApi.waitForSmsVerifyCode(newOrder.id, timeout, 3000);
+        // Method 3: Look for "Skip" button by text (fallback)
+        // الطريقة 3: البحث عن زر "Skip" بالنص (احتياطي)
+        if (!buttonClicked) {
+            try {
+                const skipButton = await page.evaluateHandle(() => {
+                    const buttons = Array.from(document.querySelectorAll('button, a'));
+                    return buttons.find(btn => {
+                        const text = (btn.textContent || '').toLowerCase().trim();
+                        return (text.includes('skip') || 
+                                text.includes('تخطي') || 
+                                text.includes('later') || 
+                                text.includes('لاحقاً') ||
+                                text.includes('not now') ||
+                                text.includes('ليس الآن')) && 
+                               btn.offsetParent !== null && 
+                               !btn.disabled;
+                    });
+                });
+                
+                if (skipButton && skipButton.asElement()) {
+                    await humanClick(page, skipButton.asElement(), { preClickDelay: true, postClickDelay: true });
+                    logger.info('Skip button clicked');
+                    buttonClicked = true;
+                    await humanSleep(getHumanDelay('pageLoad'));
+                }
+            } catch (e) {
+                logger.debug('Could not find Skip button by text', { error: e.message });
+            }
+        }
+        
+        // Method 4: Look for "Skip" link by aria-label or href (fallback)
+        // الطريقة 4: البحث عن رابط "Skip" بـ aria-label أو href (احتياطي)
+        if (!buttonClicked) {
+            try {
+                const skipSelectors = [
+                    'a[aria-label*="skip" i]',
+                    'a[aria-label*="تخطي" i]',
+                    'a[href*="skip"]',
+                    'button[aria-label*="skip" i]',
+                    'button[aria-label*="تخطي" i]'
+                ];
+                
+                for (const selector of skipSelectors) {
+                    try {
+                        const skipElement = await waitForElement(page, selector, 2000);
+                        if (skipElement) {
+                            await humanClick(page, skipElement, { preClickDelay: true, postClickDelay: true });
+                            logger.info('Skip button clicked (CSS selector)', { selector });
+                            buttonClicked = true;
+                            await humanSleep(getHumanDelay('pageLoad'));
+                            break;
+                        }
+                    } catch (e) {
+                        continue;
+                    }
+                }
+            } catch (e) {
+                logger.debug('Could not find Skip button by CSS selectors', { error: e.message });
+            }
+        }
+        
+        if (buttonClicked) {
+            // Wait for navigation
+            const urlBefore = page.url();
+            for (let i = 0; i < 10; i++) {
+                await page.waitForTimeout(1000);
+                const urlAfter = page.url();
+                if (urlAfter !== urlBefore) {
+                    logger.info('Page navigated after button click', { from: urlBefore, to: urlAfter });
+                    break;
+                }
+            }
+            return true;
+        }
+        
+        logger.warn('Could not find Next or Skip button');
+        return false;
+    } catch (error) {
+        logger.error('Error handling Next/Skip button', { error: error.message });
+        return false;
+    }
+}
+
+/**
+ * Get OTP code for recovery phone (using same phone number and same order)
+ * الحصول على كود OTP لرقم الاسترداد (باستخدام نفس الرقم ونفس الطلب)
+ */
+async function getNewRecoveryOTP(phoneNumber, countryCode, smsProvider, orderId, timeout = 120000) {
+    try {
+        logger.info('Getting OTP code for recovery phone using existing order', { 
+            phone: phoneNumber, 
+            orderId: orderId 
+        });
+        
+        // Validate that we have orderId and phoneNumber
+        if (!orderId) {
+            throw new Error('Order ID is required to get recovery phone OTP code');
+        }
+        
+        if (!phoneNumber) {
+            throw new Error('Phone number is required to get recovery phone OTP code');
+        }
+        
+        // Wait for verification code from the same order
+        // انتظار كود التحقق من نفس الطلب
+        logger.info('Waiting for SMS code from existing order', { orderId, phone: phoneNumber });
+        const verificationCode = await smsApi.waitForSmsVerifyCode(orderId, timeout, 3000);
         
         if (!verificationCode) {
             throw new Error('Failed to receive verification code for recovery phone');
         }
         
-        // Finish the order
-        await smsApi.finishSmsVerifyOrder(newOrder.id);
+        // Finish the order after getting the code
+        await smsApi.finishSmsVerifyOrder(orderId);
         
-        logger.info('New OTP code received for recovery phone', { code: verificationCode.code || verificationCode });
+        logger.info('OTP code received for recovery phone', { 
+            code: verificationCode.code || verificationCode,
+            orderId,
+            phone: phoneNumber
+        });
         
         return {
             code: verificationCode.code || verificationCode,
-            orderId: newOrder.id,
-            phone: newOrder.phone
+            orderId: orderId,
+            phone: phoneNumber
         };
     } catch (error) {
-        logger.error('Error getting new recovery OTP', { error: error.message });
+        logger.error('Error getting recovery OTP', { error: error.message });
         throw error;
     }
 }
@@ -929,10 +1091,25 @@ export async function addRecoveryPhone(page, accountData, countryCode) {
                     break;
                     
                 case 'VERIFY_CODE':
-                    // Get new OTP code for recovery phone
-                    logger.info('Verification code page detected, getting new OTP code...');
+                    // Get OTP code for recovery phone using same order
+                    logger.info('Verification code page detected, getting OTP code from existing order...');
                     const smsProvider = (process.env.SMS_PROVIDER || 'sms-verification').toLowerCase().trim();
-                    const verificationCode = await getNewRecoveryOTP(accountData.phone, countryCode, smsProvider);
+                    
+                    // Use the same phone and orderId from accountData
+                    if (!accountData.phone || !accountData.orderId) {
+                        logger.error('Phone number or Order ID missing in accountData', {
+                            hasPhone: !!accountData.phone,
+                            hasOrderId: !!accountData.orderId
+                        });
+                        return { success: false, error: 'Phone number or Order ID missing' };
+                    }
+                    
+                    const verificationCode = await getNewRecoveryOTP(
+                        accountData.phone, 
+                        countryCode, 
+                        smsProvider, 
+                        accountData.orderId
+                    );
                     
                     // Enter verification code
                     const codeHandled = await handleVerificationCodePage(page, verificationCode);
@@ -956,6 +1133,15 @@ export async function addRecoveryPhone(page, accountData, countryCode) {
                     
                 case 'MY_ACCOUNT':
                 case 'RECOVERY_OPTIONS':
+                    // Try to click Skip button if available
+                    // محاولة الضغط على زر Skip إذا كان متاحاً
+                    logger.info('Account page or recovery options detected, checking for Skip button...');
+                    const skipHandled = await handleSkipButton(page);
+                    if (skipHandled) {
+                        logger.info('Skip button clicked successfully');
+                        await page.waitForTimeout(2000);
+                    }
+                    
                     // We're back to account page or recovery options, might be done
                     if (step > 3) {
                         logger.info('Returned to account page, recovery phone process may be complete');

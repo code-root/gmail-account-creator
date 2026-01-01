@@ -1,0 +1,60 @@
+{
+  "success": false,
+  "email": "ghadalotfi1998@gmail.com",
+  "username": "ghadalotfi1998",
+  "firstName": "Ghada",
+  "lastName": "Lotfi",
+  "fullName": "Ghada Lotfi",
+  "password": "O10NWmfll&DU1&Yj",
+  "gender": "female",
+  "proxy": "103.66.181.13:10000:geonode_y1DkjlYREm-type-residential-country-at-lifetime-3-session-2kH5DC:df9448e9-cafd-4afd-bd01-6b779f5598ea",
+  "proxyIP": "103.66.181.13",
+  "timestamp": "2026-01-01T23:28:46.001Z",
+  "accountNumber": 1,
+  "profileId": "906b06b5-96cf-42cb-b1eb-e7494b4e4ac5",
+  "profileType": "GPM Login",
+  "error": "Failed to fill password fields after 20 attempts",
+  "errorStack": "Error: Failed to fill password fields after 20 attempts\n    at fillUsernameAndPassword (file:///C:/Users/Administrator/Desktop/gmail-account-creator-main/src/gmail/creator.js:1430:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async createGmailAccount (file:///C:/Users/Administrator/Desktop/gmail-account-creator-main/src/gmail/creator.js:357:9)\n    at async createAccount (file:///C:/Users/Administrator/Desktop/gmail-account-creator-main/src/index.js:312:22)\n    at async executeTask (file:///C:/Users/Administrator/Desktop/gmail-account-creator-main/src/index.js:642:28)\n    at async Promise.all (index 0)\n    at async processQueue (file:///C:/Users/Administrator/Desktop/gmail-account-creator-main/src/index.js:671:5)\n    at async main (file:///C:/Users/Administrator/Desktop/gmail-account-creator-main/src/index.js:748:36)",
+  "cookies": [
+    {
+      "name": "NID",
+      "value": "527=a0bOPjRIVEBUWpiVzcjj78RBGOCmjdp-vcZjhea0GD6N94qDmPktefpAZ7XAHVGYS06RSoEBORPubL_1HPr-DBL2wye-S8psgDiimoQ8rm3hKXjckztycf8rOAYGwMryGYyPEkoa3gx9NKmZKWMVWv27ApvQS4jvzglqPXTEGEi-LjOxrGUNQLPcNqX_iunJIbP0CVMP8zK2Xpv_HYvLt12WMJgrazUZawr2_eBPyg04htT956k",
+      "domain": ".google.com",
+      "path": "/",
+      "expires": 1783121439.104982,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "__Host-GAPS",
+      "value": "1:cP1HeP1Snzycempw_Vkdgv2-WqIr1Q:YLJqEFLDRhCf7MEA",
+      "domain": "accounts.google.com",
+      "path": "/",
+      "expires": 1801870166.49395,
+      "httpOnly": true,
+      "secure": true
+    },
+    {
+      "name": "OTZ",
+      "value": "8416770_52_52_123900_48_436380",
+      "domain": "accounts.google.com",
+      "path": "/",
+      "expires": 1769902188,
+      "httpOnly": false,
+      "secure": true
+    },
+    {
+      "name": "__Secure-ENID",
+      "value": "30.SE=jTOl2m16CowNgZGzxZ7o2FCYB2waIrUxSB6KLJv6np82pR_8BFk3b7Ip3nCKz67g2sLD61F8-ABHToxH34Vw_SyBl_gkmg1wdjEQwKiXl4RjOThWhcb5waGOFxns_mAq1H_NPNqoKq3We9cp1zMYR7D5uLu-UKdxz1BVaTVioWXQF6vkAdxvU6dPcCZ1t3lwQPbLfSGPQTuP7gQvOFTEO2pCy0eq_ipu8rIsJs65ppWfQU3mY0sc",
+      "domain": ".google.com",
+      "path": "/",
+      "expires": 1801496847.296718,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    }
+  ],
+  "createdAt": "2026-01-01T23:32:17.081Z",
+  "savedAt": "2026-01-01T23:32:17.084Z"
+}

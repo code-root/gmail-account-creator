@@ -540,6 +540,29 @@ gmail-account-creator
 
 ---
 
+## دعم المشروع (Support)
+
+إذا كان هذا المشروع مفيداً لك، يمكنك — اختيارياً — دعم الصيانة والتطوير عبر أي قناة تناسبك.
+
+| القناة | طريقة الدعم |
+|--------|-------------|
+| **PayPal** | [paypal.me/sofaapi](https://paypal.me/sofaapi) |
+| **Binance Pay / UID** | **1138751298** — من تطبيق Binance (Pay / تحويل داخلي عند توفره). |
+| **إيداع Binance (الويب)** | [إيداع العملات المشفرة (Binance)](https://www.binance.com/en/my/wallet/account/main/deposit/crypto) — سجّل الدخول، اختر الأصل، ثم شبكة **BSC (BEP20)**. |
+| **عنوان BSC (للنسخ)** | `0x94c5005229784d9b7df4e7a7a0c3b25a08fd57bc` |
+
+> **الشبكة:** استخدم **BSC (BEP-20)** فقط. هذا العنوان مخصص لـ **USDT (BEP-20)** و**BTC على BSC** (Binance-Peg / «BTC» على BSC داخل التطبيق)، بما يتوافق مع شاشات الإيداع في Binance. **لا ترسل** **بتكوين أصلي على السلسلة (on-chain BTC)**، ولا **ERC-20**، ولا **NFTs** إلى هذا العنوان.
+
+### رموز QR للإيداع (امسح ضوئياً في Binance أو أي محفظة BSC)
+
+| USDT · BSC | BTC · BSC |
+|------------|-----------|
+| ![USDT deposit QR — BSC](assets/deposit-usdt-bsc.png) | ![BTC on BSC deposit QR](assets/deposit-btc-bsc.png) |
+
+ضع ملفات الصور في [`assets/`](assets/) — راجع [`assets/README.md`](assets/README.md). النسخة الإنجليزية الكاملة: [Support this project](README.md#support-this-project).
+
+---
+
 ## تحذير قانوني وأخلاقي
 
 أتمتة إنشاء حسابات Google قد **تخالف شروط استخدام Google** والقوانين المحلية. استخدم المشروع فقط في بيئات تملكها، وبإذن صريح، ولأغراض مشروعة (مثل اختبار أنظمتك الداخلية). المسؤولية الكاملة عن الاستخدام تقع على المستخدم.

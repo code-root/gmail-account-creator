@@ -501,6 +501,7 @@ More examples: [`USAGE.md`](USAGE.md).
 │   ├── list-dolphin-folders.js
 │   └── omocaptcha-extension.js
 ├── docs/                  # Extra assets (e.g. OpenAPI export)
+├── assets/                # Support QR images (see assets/README.md)
 ├── config/
 │   ├── proxies.txt
 │   └── names.json
@@ -570,6 +571,29 @@ updates:
     schedule:
       interval: weekly
 ```
+
+---
+
+## Support this project
+
+If this tool is useful to you, optional support helps maintain and improve it. Pick whatever works best for you.
+
+| Channel | How to support |
+|--------|----------------|
+| **PayPal** | [paypal.me/sofaapi](https://paypal.me/sofaapi) |
+| **Binance Pay / UID** | **1138751298** — send from the Binance app (Pay / internal transfer when available). |
+| **Binance — deposit (web)** | [Deposit crypto (Binance)](https://www.binance.com/en/my/wallet/account/main/deposit/crypto) — sign in, pick the asset, then select **BSC (BEP20)**. |
+| **BSC address (copy)** | `0x94c5005229784d9b7df4e7a7a0c3b25a08fd57bc` |
+
+> **Network:** Use **BSC (BEP-20)** only. This address is for **USDT (BEP-20)** and **BTC on BSC** (Binance-Peg / in-app “BTC” on BSC), matching the Binance deposit screens below. **Do not** send **native Bitcoin (on-chain BTC)**, **ERC-20**, or **NFTs** to this address.
+
+### Deposit QR codes (scan in Binance or any BSC wallet)
+
+| USDT · BSC | BTC · BSC |
+|------------|-----------|
+| ![USDT deposit QR — BSC](assets/deposit-usdt-bsc.png) | ![BTC on BSC deposit QR](assets/deposit-btc-bsc.png) |
+
+Place the image files in [`assets/`](assets/) (see [`assets/README.md`](assets/README.md)). If the files are missing, clone or download the repo after adding your QR PNGs.
 
 ---
 

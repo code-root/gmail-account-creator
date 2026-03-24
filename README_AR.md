@@ -518,6 +518,10 @@ flowchart TD
 3. انشر الإصدار.  
    - **ملاحظة:** ملف **`.tgz`** يُرفَق تلقائياً عند **دفع الوسم** (الخيار أ). إن أنشأت الإصدار يدوياً فقط من الواجهة دون دفع وسم مطابق، شغّل `npm pack` محلياً وأرفق الملف، أو ادفع الوسم لاحقاً لتشغيل سير العمل.
 
+#### إذا كانت GitHub Actions معطّلة (مثلاً بسبب الفوترة)
+
+بدون Actions يمكنك: (1) تشغيل `npm pack` ورفع الملف من **Create a new release** أو عبر `gh release create`؛ (2) تنفيذ `npm publish` محلياً بتوكن يملك `write:packages` وسجل `npm.pkg.github.com` — راجع [توثيق GitHub](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry).
+
 ### التثبيت من GitHub Packages
 
 أضف إلى `.npmrc` (مع [رمز وصول](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry) يملك `read:packages`):

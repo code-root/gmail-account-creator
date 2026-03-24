@@ -541,6 +541,15 @@ On the repository home page, GitHub shows **Releases** (right sidebar / [`…/re
 
 This repository is published as **`@code-root/gmail-account-creator`** on [GitHub Packages](https://github.com/features/packages) (npm registry).
 
+#### If GitHub Actions are blocked (e.g. billing)
+
+Workflows that attach `.tgz` or run `npm publish` need **Actions** enabled on the repository. You can still:
+
+1. **Release + asset:** from a clean checkout, run `npm pack`, then use the GitHub UI **Create a new release** and upload the generated `.tgz`, or run:  
+   `gh release create v1.2.3 code-root-gmail-account-creator-1.2.3.tgz --title "v1.2.3" --generate-notes`
+2. **Publish to Packages locally:**  
+   `npm publish` with a [PAT](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry#authenticating-with-a-personal-access-token) that has `write:packages`, after `npm login --scope=@code-root --registry=https://npm.pkg.github.com`.
+
 ### Install from GitHub Packages
 
 Configure npm for the `@code-root` scope (use a [GitHub personal access token](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry#authenticating-to-github-packages) with `read:packages`):

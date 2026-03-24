@@ -8,6 +8,43 @@
 [![Releases](https://img.shields.io/github/v/release/code-root/gmail-account-creator?label=release&logo=github)](https://github.com/code-root/gmail-account-creator/releases)
 [![Packages](https://img.shields.io/badge/Packages-npm-24292f?logo=github)](https://github.com/code-root/gmail-account-creator/pkgs/npm/gmail-account-creator)
 
+## Table of contents
+
+**Jump to:** [Arabic README (`README_AR.md`)](README_AR.md#فهرس-المحتويات) · [Repository on GitHub](https://github.com/code-root/gmail-account-creator)
+
+| Section | |
+|--------|---|
+| [About](#about) | [Repository metadata (GitHub)](#repository-metadata-github) |
+| [Features](#features) | [Tech stack](#tech-stack) |
+| [How it works (high level)](#how-it-works-high-level) | [Architecture diagrams](#architecture-diagrams) |
+| [Module map](#module-map) | [Function reference](#function-reference) |
+| [Prerequisites](#prerequisites) | [Installation](#installation) |
+| [Configuration highlights](#configuration-highlights) | [Usage](#usage) |
+| [Project layout](#project-layout) | [Releases & GitHub Packages](#releases--github-packages) |
+| [Suggested GitHub Actions workflows](#suggested-github-actions-workflows-this-stack) | [Maintainer, company & contact](#maintainer-company--contact) |
+| [Support this project](#support-this-project) | [Legal & ethics](#legal--ethics) |
+| [Links](#links) | |
+
+**Architecture diagrams**
+
+- [System context](#system-context)
+- [One account — sequence (happy path)](#one-account--sequence-happy-path)
+- [Gmail signup sub-flow (logical)](#gmail-signup-sub-flow-logical)
+- [Concurrency model](#concurrency-model)
+
+**Releases & Packages (subsections)**
+
+- [Option A — Automated release (recommended)](#option-a--automated-release-recommended)
+- [Option B — “Create a new release” in the GitHub UI](#option-b--create-a-new-release-in-the-github-ui)
+- [Install from GitHub Packages](#install-from-github-packages)
+- [Publish workflow](#publish-workflow)
+
+**Support**
+
+- [Deposit QR codes (Binance / BSC)](#deposit-qr-codes-scan-in-binance-or-any-bsc-wallet)
+
+---
+
 ## About
 
 **Gmail Account Creator** is a Node.js automation toolkit that runs **Google / Gmail signup** inside a real **antidetect browser profile** ([GPM Login](https://gpmlogin.com/) or [Dolphin Anty](https://dolphin-anty.com/)), connects with **Puppeteer**, solves **reCAPTCHA** via the **OMO Captcha** extension, and completes **phone verification** through pluggable **SMS** APIs (SMS Verification, 5SIM Legacy). It supports **proxies**, **human-like input**, and **parallel account jobs** with summarized output to JSON and logs.

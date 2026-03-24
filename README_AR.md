@@ -1,14 +1,33 @@
 # منشئ حسابات Gmail — دليل عربي مفصّل
 
 [![English README](https://img.shields.io/badge/README-English-blue)](README.md)
+[![المستودع على GitHub](https://img.shields.io/badge/GitHub-code--root%2Fgmail--account--creator-181717?logo=github)](https://github.com/code-root/gmail-account-creator)
 
-هذا المستند يشرح **الخطوات والعمليات** بالتفصيل للمشروع [gmail-account-creator](https://github.com/code-root/gmail-account-creator)، ويتضمن **مخططات Mermaid**، **جداول للوحدات**، و**مرجعاً للدوال** (المصدَّرة والمساعدة داخل `creator.js`). النسخة الإنجليزية الافتراضية في [`README.md`](README.md) تحتوي على نفس المستوى من التفصيل.
+## حول المشروع (About)
+
+**منشئ حسابات Gmail** أداة أتمتة بـ **Node.js** لتشغيل تدفق **إنشاء حساب Google / Gmail** داخل **بروفايل متصفح مضاد للبصمة** ([GPM Login](https://gpmlogin.com/) أو [Dolphin Anty](https://dolphin-anty.com/))، مع الربط عبر **Puppeteer**، وحل **reCAPTCHA** عبر إضافة **OMO Captcha**، وإكمال **التحقق بالهاتف** عبر واجهات **SMS** (SMS Verification أو 5SIM Legacy). يدعم **البروكسيات**، **إدخالاً شبيهاً بالإنسان**، وتشغيلاً **متوازياً** مع حفظ النتائج في JSON وسجلات.
+
+| | |
+|--|--|
+| **المستودع** | [github.com/code-root/gmail-account-creator](https://github.com/code-root/gmail-account-creator) |
+| **الحزمة** | `@code-root/gmail-account-creator` على [GitHub Packages](https://github.com/code-root/gmail-account-creator/pkgs/npm/gmail-account-creator) |
+| **الترخيص** | ISC — راجع [`LICENSE`](LICENSE) |
+
+**الوصف القصير (Description) على GitHub (إنجليزي):**  
+*Automated Gmail signup using GPM Login or Dolphin Anty, Puppeteer, OMO Captcha, and SMS verification APIs. Node.js (ESM).*
+
+**الوسوم (Topics / Tags) على GitHub:**  
+`gmail` · `automation` · `puppeteer` · `nodejs` · `gpm-login` · `dolphin-anty` · `antidetect-browser` · `captcha` · `sms-verification` · `recaptcha` · `browser-automation` · `javascript` · `dotenv` · `axios` · `es-modules` · `github-packages`
 
 ---
 
-## وصف المشروع
+هذا المستند يشرح **الخطوات والعمليات** بالتفصيل، ويتضمن **مخططات Mermaid**، **جداول للوحدات**، و**مرجعاً للدوال**. النسخة الإنجليزية في [`README.md`](README.md).
 
-التطبيق يشغّل **متصفحاً حقيقياً** داخل **بروفايل مضاد للبصمة** (Antidetect) عبر:
+---
+
+## وصف المشروع (تفصيل تقني)
+
+التطبيق يشغّل **متصفحاً حقيقياً** داخل **بروفايل مضاد للبصمة** عبر:
 
 - **GPM Login** (الافتراضي)، أو  
 - **Dolphin Anty**
@@ -17,15 +36,6 @@
 
 - **إضافة OMO Captcha** لمعالجة اختبارات مثل reCAPTCHA  
 - **مزود SMS** لتأكيد رقم الهاتف (SMS Verification أو 5SIM Legacy حسب الإعدادات)
-
----
-
-## العلامات والوصف المقترحة على GitHub
-
-| الحقل | مقترح |
-|--------|--------|
-| **Description** | أتمتة تسجيل Gmail عبر GPM Login أو Dolphin Anty مع Puppeteer وOMO Captcha وواجهات SMS. |
-| **Topics** | `gmail`, `automation`, `puppeteer`, `nodejs`, `gpm-login`, `dolphin-anty`, `captcha`, `sms-verification` |
 
 ---
 

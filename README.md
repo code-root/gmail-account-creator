@@ -4,22 +4,34 @@
 [![ES Modules](https://img.shields.io/badge/modules-ESM-yellow)](https://nodejs.org/api/esm.html)
 [![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](LICENSE)
 [![Puppeteer](https://img.shields.io/badge/automation-Puppeteer%20Core-green)](https://pptr.dev/)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-code--root%2Fgmail--account--creator-181717?logo=github)](https://github.com/code-root/gmail-account-creator)
 
-Automation toolkit that drives **Google account signup** in a real browser profile managed by **[GPM Login](https://gpmlogin.com/)** or **[Dolphin Anty](https://dolphin-anty.com/)**, with **OMO Captcha** for reCAPTCHA handling and an **SMS verification** provider for phone confirmation.
+## About
 
-> **Arabic documentation:** full walkthrough, the same diagrams, and Arabic tables for every function — see [`README_AR.md`](README_AR.md).
+**Gmail Account Creator** is a Node.js automation toolkit that runs **Google / Gmail signup** inside a real **antidetect browser profile** ([GPM Login](https://gpmlogin.com/) or [Dolphin Anty](https://dolphin-anty.com/)), connects with **Puppeteer**, solves **reCAPTCHA** via the **OMO Captcha** extension, and completes **phone verification** through pluggable **SMS** APIs (SMS Verification, 5SIM Legacy). It supports **proxies**, **human-like input**, and **parallel account jobs** with summarized output to JSON and logs.
+
+| | |
+|--|--|
+| **Repository** | [github.com/code-root/gmail-account-creator](https://github.com/code-root/gmail-account-creator) |
+| **Package** | `@code-root/gmail-account-creator` ([GitHub Packages](https://github.com/code-root/gmail-account-creator/pkgs/npm/gmail-account-creator)) |
+| **License** | ISC — see [`LICENSE`](LICENSE) |
+
+**Topics (GitHub tags):**  
+`gmail` · `automation` · `puppeteer` · `nodejs` · `gpm-login` · `dolphin-anty` · `antidetect-browser` · `captcha` · `sms-verification` · `recaptcha` · `browser-automation` · `javascript` · `dotenv` · `axios` · `es-modules` · `github-packages`
+
+> **Arabic documentation:** full walkthrough, diagrams, and function tables — [`README_AR.md`](README_AR.md).
 
 ---
 
 ## Repository metadata (GitHub)
 
-Use these on the GitHub repository page to improve discoverability.
+These values are configured on the GitHub **About** sidebar (description, website, topics). They were applied to [`code-root/gmail-account-creator`](https://github.com/code-root/gmail-account-creator) via `gh repo edit`; you can change them anytime under **Settings** or with the CLI.
 
-| Field | Suggested value |
-|--------|------------------|
-| **Description** | Automated Gmail signup flow using GPM Login or Dolphin Anty, Puppeteer, OMO Captcha, and SMS verification APIs. |
-| **Website** | _(optional)_ Your docs or landing page URL |
-| **Topics (tags)** | `gmail`, `automation`, `puppeteer`, `nodejs`, `gpm-login`, `dolphin-anty`, `antidetect-browser`, `captcha`, `sms-verification`, `dotenv`, `axios`, `es-modules` |
+| Field | Value |
+|--------|--------|
+| **Description** | Automated Gmail signup using GPM Login or Dolphin Anty, Puppeteer, OMO Captcha, and SMS verification APIs. Node.js (ESM). |
+| **Website** | https://github.com/code-root/gmail-account-creator#readme |
+| **Topics** | gmail, automation, puppeteer, nodejs, gpm-login, dolphin-anty, antidetect-browser, captcha, sms-verification, dotenv, axios, es-modules, javascript, browser-automation, recaptcha, github-packages |
 
 ---
 

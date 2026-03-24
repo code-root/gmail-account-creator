@@ -1,0 +1,22 @@
+{
+  "female": [
+    "Fatima", "Aisha", "Mariam", "Khadija", "Zainab", "Amina", "Safiya", "Hafsa",
+    "Layla", "Noor", "Sarah", "Maryam", "Hana", "Yasmin", "Nadia", "Salma",
+    "Rania", "Dina", "Lina", "Mona", "Nour", "Reem", "Heba", "Doha",
+    "Esraa", "Rana", "Laila", "Noha", "Noreen", "Hanan", "Dina", "Maya",
+    "Lara", "Yara", "Leen", "Tala", "Rim", "Rita", "Rania", "Sara",
+    "Mariam", "Nour", "Hala", "Nada", "Rana", "Dina", "Lina", "Mona",
+    "Nour", "Reem", "Heba", "Doha", "Esraa", "Rana", "Laila", "Noha"
+  ],
+  "male": [
+    "Ahmed", "Mohammed", "Ali", "Hassan", "Hussein", "Omar", "Khaled", "Youssef",
+    "Ibrahim", "Ismail", "Yasin", "Tariq", "Bilal", "Amr", "Mahmoud", "Said",
+    "Karim", "Tamer", "Waleed", "Fadi", "Rami", "Sami", "Nader", "Ziad",
+    "Omar", "Khalid", "Yusuf", "Ibrahim", "Ismail", "Yasin", "Tariq", "Bilal",
+    "Amr", "Mahmoud", "Said", "Karim", "Tamer", "Waleed", "Fadi", "Rami",
+    "Sami", "Nader", "Ziad", "Malik", "Nasser", "Faisal", "Salem", "Hamza",
+    "Adam", "Noah", "Yusuf", "Ibrahim", "Ismail", "Yasin", "Tariq", "Bilal"
+  ]
+}
+
+

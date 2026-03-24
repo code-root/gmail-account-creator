@@ -1,0 +1,62 @@
+{
+  "name": "@code-root/gmail-account-creator",
+  "version": "1.0.0",
+  "description": "Automated Gmail account creator using GPM Login, OMO Captcha, and SMS Verification",
+  "main": "src/index.js",
+  "type": "module",
+  "bin": {
+    "gmail-account-creator": "bin/gmail-account-creator.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "scripts",
+    "config",
+    "docs",
+    ".env.example",
+    "LICENSE",
+    "README.md",
+    "README_AR.md",
+    "ENV_VARIABLES.md",
+    "SETUP.md",
+    "USAGE.md"
+  ],
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "list-folders": "node scripts/list-dolphin-folders.js",
+    "prepack": "node --check src/index.js && node --check bin/gmail-account-creator.js"
+  },
+  "keywords": [
+    "gmail",
+    "automation",
+    "gpmlogin",
+    "gpm-login",
+    "captcha",
+    "puppeteer",
+    "dolphin-anty"
+  ],
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/code-root/gmail-account-creator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/code-root/gmail-account-creator/issues"
+  },
+  "homepage": "https://github.com/code-root/gmail-account-creator#readme",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "dotenv": "^16.3.0",
+    "gologin": "^2.1.33",
+    "puppeteer-core": "^21.0.0"
+  }
+}

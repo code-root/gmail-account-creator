@@ -1,0 +1,47 @@
+# Create a GitHub Release and attach the npm pack tarball when you push a version tag.
+# Usage: update version in package.json, then:
+#   git tag v1.0.1 && git push origin v1.0.1
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Verify pack
+        run: npm pack --dry-run
+
+      - name: Create tarball
+        id: pack
+        run: |
+          npm pack
+          TGZ=$(ls -1 ./*.tgz | head -1)
+          echo "package=$TGZ" >> "$GITHUB_OUTPUT"
+          echo "Created $TGZ"
+
+      - name: Publish GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: ${{ steps.pack.outputs.package }}
+          generate_release_notes: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

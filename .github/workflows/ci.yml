@@ -1,0 +1,37 @@
+# Suggested workflow for Node.js + ESM + puppeteer-core (install + syntax check)
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [20.x]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: npm
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Syntax check (Node)
+        run: |
+          node --check src/index.js
+          node --check src/config.js
+          node --check src/providers/sms-provider.js
+          node --check src/providers/sms-verification-api.js
+          node --check src/providers/fivesim-api-legacy.js
+          node --check scripts/list-dolphin-folders.js

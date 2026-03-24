@@ -17,6 +17,7 @@
 | **Repository** | [github.com/code-root/gmail-account-creator](https://github.com/code-root/gmail-account-creator) |
 | **Releases** | [**Releases** tab](https://github.com/code-root/gmail-account-creator/releases) — source archives + `.tgz` from CI when you push a `v*` tag |
 | **Packages** | [**Packages** (npm)](https://github.com/code-root/gmail-account-creator/pkgs/npm/gmail-account-creator) — `@code-root/gmail-account-creator` on GitHub Packages |
+| **Maintainer** | Mostafa Al-Bagouri — [Storage TE](http://storage-te.com/) — [WhatsApp](https://wa.me/201001995914) |
 | **License** | ISC — see [`LICENSE`](LICENSE) |
 
 **Topics (GitHub tags):**  
@@ -598,6 +599,16 @@ updates:
     schedule:
       interval: weekly
 ```
+
+---
+
+## Maintainer, company & contact
+
+| | |
+|---|---|
+| **Developer** | Mostafa Al-Bagouri |
+| **Company** | **[Storage TE](http://storage-te.com/)** |
+| **WhatsApp** | [+20 100 199 5914](https://wa.me/201001995914) |
 
 ---
 

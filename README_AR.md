@@ -14,6 +14,7 @@
 | **المستودع** | [github.com/code-root/gmail-account-creator](https://github.com/code-root/gmail-account-creator) |
 | **Releases** | [تبويب الإصدارات](https://github.com/code-root/gmail-account-creator/releases) — **Create a new release** من الواجهة، أو دفع وسم `v*` لإرفاق `.tgz` تلقائياً |
 | **Packages** | [حزم npm على GitHub](https://github.com/code-root/gmail-account-creator/pkgs/npm/gmail-account-creator) — `@code-root/gmail-account-creator` |
+| **المسؤول عن الصيانة** | مصطفى البغوري — [Storage TE](http://storage-te.com/) — [واتساب](https://wa.me/201001995914) |
 | **الترخيص** | ISC — راجع [`LICENSE`](LICENSE) |
 
 **الوصف القصير (Description) على GitHub (إنجليزي):**  
@@ -559,6 +560,16 @@ gmail-account-creator
 3. **نشر الحزمة:** عند نشر إصدار — `.github/workflows/publish-github-packages.yml`  
 4. **Dependabot (اختياري):** تحديثات أسبوعية لـ `npm`.  
 5. **عدم رفع أسرار:** التأكد أن `.env` غير مرفوع.
+
+---
+
+## المطوّر والشركة والتواصل
+
+| | |
+|---|---|
+| **المطوّر** | مصطفى البغوري (Mostafa Al-Bagouri) |
+| **الشركة** | **[Storage TE](http://storage-te.com/)** |
+| **واتساب** | [+20 100 199 5914](https://wa.me/201001995914) |
 
 ---
 

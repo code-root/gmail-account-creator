@@ -557,9 +557,9 @@ gmail-account-creator
 
 | USDT · BSC | BTC · BSC |
 |------------|-----------|
-| ![USDT deposit QR — BSC](assets/deposit-usdt-bsc.png) | ![BTC on BSC deposit QR](assets/deposit-btc-bsc.png) |
+| ![USDT deposit QR — BSC](assets/deposit-usdt-bsc.jpeg) | ![BTC on BSC deposit QR](assets/deposit-btc-bsc.jpeg) |
 
-ضع ملفات الصور في [`assets/`](assets/) — راجع [`assets/README.md`](assets/README.md). النسخة الإنجليزية الكاملة: [Support this project](README.md#support-this-project).
+الصور محفوظة في [`assets/`](assets/) بأسماء ثابتة — راجع [`assets/README.md`](assets/README.md). النسخة الإنجليزية: [Support this project](README.md#support-this-project).
 
 ---
 

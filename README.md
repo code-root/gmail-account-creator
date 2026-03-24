@@ -591,9 +591,9 @@ If this tool is useful to you, optional support helps maintain and improve it. P
 
 | USDT · BSC | BTC · BSC |
 |------------|-----------|
-| ![USDT deposit QR — BSC](assets/deposit-usdt-bsc.png) | ![BTC on BSC deposit QR](assets/deposit-btc-bsc.png) |
+| ![USDT deposit QR — BSC](assets/deposit-usdt-bsc.jpeg) | ![BTC on BSC deposit QR](assets/deposit-btc-bsc.jpeg) |
 
-Place the image files in [`assets/`](assets/) (see [`assets/README.md`](assets/README.md)). If the files are missing, clone or download the repo after adding your QR PNGs.
+Source files were renamed from WhatsApp exports to stable paths under [`assets/`](assets/) — see [`assets/README.md`](assets/README.md).
 
 ---
 

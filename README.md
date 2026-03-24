@@ -21,7 +21,7 @@
 | **License** | ISC — see [`LICENSE`](LICENSE) |
 
 **Topics (GitHub tags):**  
-`gmail` · `automation` · `puppeteer` · `nodejs` · `gpm-login` · `dolphin-anty` · `antidetect-browser` · `captcha` · `sms-verification` · `recaptcha` · `browser-automation` · `javascript` · `dotenv` · `axios` · `es-modules` · `github-packages`
+`gmail` · `gmail-creator` · `automation` · `account-creation` · `puppeteer` · `nodejs` · `javascript` · `gpm-login` · `dolphin-anty` · `antidetect-browser` · `anti-ban` · `ban-avoidance` · `undetected-automation` · `captcha` · `recaptcha` · `sms-verification` · `browser-automation` · `dotenv` · `axios` · `github-packages` *(GitHub allows max 20 topics; `es-modules` rotated out for these.)*
 
 > **Arabic documentation:** full walkthrough, diagrams, and function tables — [`README_AR.md`](README_AR.md).
 
@@ -33,9 +33,9 @@ These values are configured on the GitHub **About** sidebar (description, websit
 
 | Field | Value |
 |--------|--------|
-| **Description** | Automated Gmail signup using GPM Login or Dolphin Anty, Puppeteer, OMO Captcha, and SMS verification APIs. Node.js (ESM). |
+| **Description** | Automated Gmail signup (Node.js ESM): GPM Login / Dolphin Anty antidetect, Puppeteer, OMO Captcha & SMS APIs. Proxies and human-like behavior to **reduce blocks, restrictions, and ban risk**. |
 | **Website** | https://github.com/code-root/gmail-account-creator#readme |
-| **Topics** | gmail, automation, puppeteer, nodejs, gpm-login, dolphin-anty, antidetect-browser, captcha, sms-verification, dotenv, axios, es-modules, javascript, browser-automation, recaptcha, github-packages |
+| **Topics** | gmail, gmail-creator, automation, account-creation, puppeteer, nodejs, javascript, gpm-login, dolphin-anty, antidetect-browser, anti-ban, ban-avoidance, undetected-automation, captcha, recaptcha, sms-verification, browser-automation, dotenv, axios, github-packages |
 
 ---
 

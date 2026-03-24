@@ -1,7 +1,7 @@
 {
   "name": "@code-root/gmail-account-creator",
   "version": "1.0.0",
-  "description": "Automated Gmail account creator using GPM Login, OMO Captcha, and SMS Verification",
+  "description": "Automated Gmail signup with antidetect (GPM/Dolphin), Puppeteer, OMO Captcha & SMS APIs — proxies and human-like flows to reduce ban risk.",
   "main": "src/index.js",
   "type": "module",
   "bin": {

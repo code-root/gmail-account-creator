@@ -18,10 +18,12 @@
 | **الترخيص** | ISC — راجع [`LICENSE`](LICENSE) |
 
 **الوصف القصير (Description) على GitHub (إنجليزي):**  
-*Automated Gmail signup using GPM Login or Dolphin Anty, Puppeteer, OMO Captcha, and SMS verification APIs. Node.js (ESM).*
+*Automated Gmail signup (Node.js ESM): GPM Login / Dolphin Anty antidetect, Puppeteer, OMO Captcha & SMS APIs. Proxies and human-like behavior to reduce blocks, restrictions, and ban risk.*
 
-**الوسوم (Topics / Tags) على GitHub:**  
-`gmail` · `automation` · `puppeteer` · `nodejs` · `gpm-login` · `dolphin-anty` · `antidetect-browser` · `captcha` · `sms-verification` · `recaptcha` · `browser-automation` · `javascript` · `dotenv` · `axios` · `es-modules` · `github-packages`
+**بالعربية (معنى الوصف):** أتمتة إنشاء حسابات Gmail مع بروفايلات مضادة للبصمة وسلوك شبيه بالإنسان وبروكسيات — بهدف **تقليل الحظر والقيود وتقليل احتمال تقييد الحساب** (لا يوجد ضمان مطلق؛ يلتزم المستخدم بشروط الخدمات).
+
+**الوسوم (Topics / Tags) على GitHub (حد أقصى 20):**  
+`gmail` · `gmail-creator` · `automation` · `account-creation` · `puppeteer` · `nodejs` · `javascript` · `gpm-login` · `dolphin-anty` · `antidetect-browser` · `anti-ban` · `ban-avoidance` · `undetected-automation` · `captcha` · `recaptcha` · `sms-verification` · `browser-automation` · `dotenv` · `axios` · `github-packages`
 
 ---
 
@@ -567,7 +569,7 @@ gmail-account-creator
 
 | | |
 |---|---|
-| **المطوّر** | مصطفى البغوري (Mostafa Al-Bagouri) |
+| **المطوّر** | مصطفى الباجوري (Mostafa Al-Bagouri) |
 | **الشركة** | **[Storage TE](http://storage-te.com/)** |
 | **واتساب** | [+20 100 199 5914](https://wa.me/201001995914) |
 

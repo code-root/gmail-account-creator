@@ -5,6 +5,8 @@
 [![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](LICENSE)
 [![Puppeteer](https://img.shields.io/badge/automation-Puppeteer%20Core-green)](https://pptr.dev/)
 [![GitHub Repo](https://img.shields.io/badge/GitHub-code--root%2Fgmail--account--creator-181717?logo=github)](https://github.com/code-root/gmail-account-creator)
+[![Releases](https://img.shields.io/github/v/release/code-root/gmail-account-creator?label=release&logo=github)](https://github.com/code-root/gmail-account-creator/releases)
+[![Packages](https://img.shields.io/badge/Packages-npm-24292f?logo=github)](https://github.com/code-root/gmail-account-creator/pkgs/npm/gmail-account-creator)
 
 ## About
 
@@ -13,7 +15,8 @@
 | | |
 |--|--|
 | **Repository** | [github.com/code-root/gmail-account-creator](https://github.com/code-root/gmail-account-creator) |
-| **Package** | `@code-root/gmail-account-creator` ([GitHub Packages](https://github.com/code-root/gmail-account-creator/pkgs/npm/gmail-account-creator)) |
+| **Releases** | [**Releases** tab](https://github.com/code-root/gmail-account-creator/releases) — source archives + `.tgz` from CI when you push a `v*` tag |
+| **Packages** | [**Packages** (npm)](https://github.com/code-root/gmail-account-creator/pkgs/npm/gmail-account-creator) — `@code-root/gmail-account-creator` on GitHub Packages |
 | **License** | ISC — see [`LICENSE`](LICENSE) |
 
 **Topics (GitHub tags):**  
@@ -515,13 +518,28 @@ More examples: [`USAGE.md`](USAGE.md).
 
 ## Releases & GitHub Packages
 
+On the repository home page, GitHub shows **Releases** (right sidebar / [`…/releases`](https://github.com/code-root/gmail-account-creator/releases)) and **Packages** ([`…/pkgs/npm/gmail-account-creator`](https://github.com/code-root/gmail-account-creator/pkgs/npm/gmail-account-creator)). This project wires both to automation and npm.
+
+| Area | Direct link | What you get |
+|------|-------------|----------------|
+| **Releases** | [github.com/code-root/gmail-account-creator/releases](https://github.com/code-root/gmail-account-creator/releases) | Version tags, changelog-style notes, downloadable **`npm pack` `.tgz`** (from Actions) |
+| **Packages** | [GitHub Packages — npm](https://github.com/code-root/gmail-account-creator/pkgs/npm/gmail-account-creator) | Installable **`@code-root/gmail-account-creator`** after `npm publish` from the release workflow |
+
+### Option A — Automated release (recommended)
+
+1. Bump `version` in `package.json` (commit and push to `main`).
+2. Create and push a tag: `git tag v1.0.1 && git push origin v1.0.1`
+3. Action **Release** (`.github/workflows/release.yml`) runs `npm pack` and creates a GitHub Release with the tarball and generated notes.
+4. When that release is **published**, **Publish to GitHub Packages** publishes the same version to npm on GitHub Packages.
+
+### Option B — “Create a new release” in the GitHub UI
+
+1. Open [**Releases**](https://github.com/code-root/gmail-account-creator/releases) → **“Create a new release”** (or **Draft a new release**).
+2. Choose a tag (create new tag `v1.0.x` on `main` if needed), set title, add release notes.
+3. Publish the release.  
+   - **Note:** The attached `.tgz` is only added automatically when the tag is **pushed** (Option A). For a purely UI-created release without a matching tag push, run `npm pack` locally and attach the file manually, or push the tag afterward to let the workflow run.
+
 This repository is published as **`@code-root/gmail-account-creator`** on [GitHub Packages](https://github.com/features/packages) (npm registry).
-
-### Create a GitHub Release (with `.tgz` attachment)
-
-1. Bump `version` in `package.json` (and commit).
-2. Create and push an annotated tag: `git tag v1.0.1 && git push origin v1.0.1`
-3. Workflow **Release** (`.github/workflows/release.yml`) builds `npm pack` and attaches the tarball to a [GitHub Release](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases) with auto-generated notes.
 
 ### Install from GitHub Packages
 

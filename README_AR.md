@@ -2,6 +2,8 @@
 
 [![English README](https://img.shields.io/badge/README-English-blue)](README.md)
 [![المستودع على GitHub](https://img.shields.io/badge/GitHub-code--root%2Fgmail--account--creator-181717?logo=github)](https://github.com/code-root/gmail-account-creator)
+[![Releases](https://img.shields.io/github/v/release/code-root/gmail-account-creator?label=Releases&logo=github)](https://github.com/code-root/gmail-account-creator/releases)
+[![Packages](https://img.shields.io/badge/Packages-npm-24292f?logo=github)](https://github.com/code-root/gmail-account-creator/pkgs/npm/gmail-account-creator)
 
 ## حول المشروع (About)
 
@@ -10,7 +12,8 @@
 | | |
 |--|--|
 | **المستودع** | [github.com/code-root/gmail-account-creator](https://github.com/code-root/gmail-account-creator) |
-| **الحزمة** | `@code-root/gmail-account-creator` على [GitHub Packages](https://github.com/code-root/gmail-account-creator/pkgs/npm/gmail-account-creator) |
+| **Releases** | [تبويب الإصدارات](https://github.com/code-root/gmail-account-creator/releases) — **Create a new release** من الواجهة، أو دفع وسم `v*` لإرفاق `.tgz` تلقائياً |
+| **Packages** | [حزم npm على GitHub](https://github.com/code-root/gmail-account-creator/pkgs/npm/gmail-account-creator) — `@code-root/gmail-account-creator` |
 | **الترخيص** | ISC — راجع [`LICENSE`](LICENSE) |
 
 **الوصف القصير (Description) على GitHub (إنجليزي):**  
@@ -492,13 +495,28 @@ flowchart TD
 
 ## الإصدارات (Releases) وحزمة GitHub Packages
 
-اسم الحزمة على سجل npm الخاص بـ GitHub: **`@code-root/gmail-account-creator`** (يجب أن يطابق نطاق الاسم مالك المستودع `code-root`).
+في صفحة المستودع يظهر **Releases** و**Packages** في الشريط الجانبي. الروابط المباشرة:
 
-### إنشاء إصدار على GitHub مع ملف `.tgz`
+| المنطقة | الرابط | الفائدة |
+|---------|--------|---------|
+| **Releases** | […/releases](https://github.com/code-root/gmail-account-creator/releases) | إصدارات مُوسومة، ملاحظات، وملف **`.tgz`** من `npm pack` عند دفع وسم `v*` |
+| **Packages** | [npm package](https://github.com/code-root/gmail-account-creator/pkgs/npm/gmail-account-creator) | تثبيت **`@code-root/gmail-account-creator`** بعد `npm publish` |
 
-1. حدّث الحقل `version` في `package.json` وادفع التغييرات.  
-2. أنشئ وسِم إصدار وادفعه: `git tag v1.0.1 && git push origin v1.0.1`  
-3. سيعمل سير العمل **Release** (`.github/workflows/release.yml`): يبني `npm pack` ويرفق الأرشيف لصفحة [الإصدار](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases) مع ملاحظات تلقائية.
+اسم الحزمة على سجل npm الخاص بـ GitHub: **`@code-root/gmail-account-creator`** (نطاق الاسم يطابق مالك المستودع `code-root`).
+
+### الخيار أ — إصدار تلقائي (مُستحسن)
+
+1. حدّث `version` في `package.json` وادفع إلى `main`.  
+2. `git tag v1.0.1 && git push origin v1.0.1`  
+3. سير العمل **Release** يبني الحزمة ويُنشئ صفحة إصدار مع الملحق.  
+4. عند **نشر** الإصدار، سير **Publish to GitHub Packages** ينشر النسخة على سجل npm لدى GitHub.
+
+### الخيار ب — من واجهة GitHub: «Create a new release»
+
+1. افتح [**Releases**](https://github.com/code-root/gmail-account-creator/releases) ثم **Create a new release** (أو **Draft a new release**).  
+2. اختر وسمًا (أنشئ وسمًا جديدًا `v1.0.x` على `main` إن لزم)، اكتب العنوان والملاحظات.  
+3. انشر الإصدار.  
+   - **ملاحظة:** ملف **`.tgz`** يُرفَق تلقائياً عند **دفع الوسم** (الخيار أ). إن أنشأت الإصدار يدوياً فقط من الواجهة دون دفع وسم مطابق، شغّل `npm pack` محلياً وأرفق الملف، أو ادفع الوسم لاحقاً لتشغيل سير العمل.
 
 ### التثبيت من GitHub Packages
 
